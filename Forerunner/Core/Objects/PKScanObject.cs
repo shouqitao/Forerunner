@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -35,11 +35,12 @@ other dealings in this Software without prior written authorization.
 using System;
 using System.Collections.Generic;
 
-#endregion
-namespace Forerunner
-{
-    public class PKScanObject
-    {
+#endregion Imports
+
+namespace Forerunner {
+
+    public class PKScanObject {
+
         #region Variables
 
         /// <summary>
@@ -52,6 +53,6 @@ namespace Forerunner
         /// </summary>
         public Exception Errors { get; set; }
 
-        #endregion
+        #endregion Variables
     }
 }

@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -30,30 +30,34 @@ other dealings in this Software without prior written authorization.
 ==============================================================================
 */
 
-namespace Forerunner
-{
-    public class ScanFetchers
-    {
+namespace Forerunner {
+
+    public class ScanFetchers {
+
         #region Variables
 
         /// <summary>
         /// Obtain the hostname of the IP being scanned.
         /// </summary>
         public bool Hostname { get; private set; } = true;
+
         /// <summary>
         /// Obtain the physical address of the IP being scanned.
         /// </summary>
         public bool MAC { get; private set; } = true;
+
         /// <summary>
         /// Obtain the length of time — in milliseconds — it takes to reach the destination address.
         /// </summary>
         public bool Ping { get; private set; } = true;
+
         /// <summary>
         /// Obtain whether or not the destination address is available or not.
         /// </summary>
         public bool Online { get; private set; } = true;
 
-        #endregion
+        #endregion Variables
+
         #region Initialization
 
         /// <summary>
@@ -63,14 +67,13 @@ namespace Forerunner
         /// <param name="mac">Obtain the physical address of the IP being scanned.</param>
         /// <param name="ping">Obtain the length of time — in milliseconds — it takes to reach the destination address.</param>
         /// <param name="online">Obtain whether or not the destination address is available or not.</param>
-        public ScanFetchers(bool hostname = true, bool mac = true, bool ping = true, bool online = true)
-        {
+        public ScanFetchers(bool hostname = true, bool mac = true, bool ping = true, bool online = true) {
             Hostname = hostname;
             MAC = mac;
             Ping = ping;
             Online = online;
         }
 
-        #endregion
+        #endregion Initialization
     }
 }

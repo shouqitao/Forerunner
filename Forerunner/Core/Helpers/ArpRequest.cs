@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -33,24 +33,23 @@ other dealings in this Software without prior written authorization.
 #region Imports
 
 using System;
-using System.Net;
 using System.ComponentModel;
-using System.Threading.Tasks;
+using System.Net;
 using System.Net.NetworkInformation;
 
-#endregion
-namespace Forerunner
-{
+#endregion Imports
+
+namespace Forerunner {
+
     /// <summary>Provides methods for sending requests through the ARP protocol.</summary>
-    public static class ArpRequest
-    {
+    public static class ArpRequest {
+
         /// <summary>
         /// Sends a request via the ARP protocol to resolve an IP address into the physical address. If the physical address is already in the cache of the host, this is returned.
         /// </summary>
         /// <param name="destination">Destination <see cref="IPAddress"/>.</param>
         /// <returns>A <see cref="T:System.Net.ArpRequestResult">ArpRequestResult</see>-Instance containing the results of the request.</returns>
-        public static ArpRequestResult Send(IPAddress destination)
-        {
+        public static ArpRequestResult Send(IPAddress destination) {
             if (destination == null)
                 throw new ArgumentNullException(nameof(destination));
 

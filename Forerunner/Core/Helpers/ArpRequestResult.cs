@@ -1,6 +1,6 @@
 /*
 ==============================================================================
-Copyright � Jason Drawdy 
+Copyright � Jason Drawdy
 
 All rights reserved.
 
@@ -33,19 +33,19 @@ other dealings in this Software without prior written authorization.
 #region Imports
 
 using System;
-using System.Text;
 using System.Net.NetworkInformation;
+using System.Text;
 
-#endregion
-namespace Forerunner
-{
+#endregion Imports
+
+namespace Forerunner {
     // TODO: rethink the whole exception thing
 
     /// <summary>
     /// Contains the return values of the ArpRequest.Send function.
     /// </summary>
-    public class ArpRequestResult
-    {
+    public class ArpRequestResult {
+
         /// <summary>If errors occur in the log request, they are stored in this property. Otherwise zero.</summary>
         public Exception Exception { get; }
 
@@ -54,36 +54,31 @@ namespace Forerunner
 
         /// <summary>Creates a new ArpRequestResult instance.</summary>
         /// <param name="address">The physical address.</param>
-        public ArpRequestResult(PhysicalAddress address)
-        {
+        public ArpRequestResult(PhysicalAddress address) {
             Exception = null;
             Address = address;
         }
 
         /// <summary>Creates a new ArpRequestResult instance.</summary>
         /// <param name="exception">The error which occurred.</param>
-        public ArpRequestResult(Exception exception)
-        {
+        public ArpRequestResult(Exception exception) {
             Exception = exception;
             Address = null;
         }
 
         /// <summary>Converts ARP return values to a string.</summary>
-        public override string ToString()
-        {
+        public override string ToString() {
             var sb = new StringBuilder();
             if (Address == null)
                 sb.Append("no address");
-            else
-            {
+            else {
                 sb.Append("address: ");
                 sb.Append(Address);
             }
             sb.Append(", ");
             if (Exception == null)
                 sb.Append("no exception");
-            else
-            {
+            else {
                 sb.Append("exception: ");
                 sb.Append(Exception.Message);
             }

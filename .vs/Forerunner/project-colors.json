@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "49ed7f0b-c2fb-499b-a7c3-66eb1601e9ab": {
+      "ProjectGuid": "49ed7f0b-c2fb-499b-a7c3-66eb1601e9ab",
+      "DisplayName": "Forerunner",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

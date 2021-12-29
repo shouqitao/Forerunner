@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -35,11 +35,12 @@ other dealings in this Software without prior written authorization.
 using System;
 using System.Net;
 
-#endregion
-namespace Forerunner
-{
-    public class IPScanObject
-    {
+#endregion Imports
+
+namespace Forerunner {
+
+    public class IPScanObject {
+
         #region Variables
 
         /// <summary>
@@ -87,7 +88,8 @@ namespace Forerunner
         /// </summary>
         public Exception Errors { get; set; }
 
-        #endregion
+        #endregion Variables
+
         #region Initialization
 
         /// <summary>
@@ -105,8 +107,7 @@ namespace Forerunner
         /// <param name="ports">Collection of scanned ports.</param>
         /// <param name="online">The online status of a device.</param>
         /// <param name="elapsed">Total amount of time for current object's scan to compelte.</param>
-        public IPScanObject(string address, long pingTime, string hostname, string mac, PKScanObject ports, bool online, double elapsed = 0)
-        {
+        public IPScanObject(string address, long pingTime, string hostname, string mac, PKScanObject ports, bool online, double elapsed = 0) {
             Address = address;
             try { IP = IPAddress.Parse(address); } catch { } // The provided IP wasn't formatted correctly.
             Ping = pingTime;
@@ -117,6 +118,6 @@ namespace Forerunner
             Elapsed = elapsed;
         }
 
-        #endregion
+        #endregion Initialization
     }
 }

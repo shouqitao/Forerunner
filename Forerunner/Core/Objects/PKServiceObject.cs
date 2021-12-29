@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -30,15 +30,15 @@ other dealings in this Software without prior written authorization.
 ==============================================================================
 */
 
-namespace Forerunner
-{
+namespace Forerunner {
+
     /// <summary>
     /// An enumeration of common data transfer protocols.
     /// </summary>
     public enum PortType { TCP, UDP }
 
-    public class PKServiceObject
-    {
+    public class PKServiceObject {
+
         #region Variables
 
         /// <summary>
@@ -61,7 +61,8 @@ namespace Forerunner
         /// </summary>
         public bool Status { get; set; }
 
-        #endregion
+        #endregion Variables
+
         #region Initialization
 
         /// <summary>
@@ -76,14 +77,13 @@ namespace Forerunner
         /// <param name="port">Initial port that was scanned.</param>
         /// <param name="protocol">The transfer protocol that the port is running on.</param>
         /// <param name="status">Status of the port itself; open or closed.</param>
-        public PKServiceObject(string ip, int port, PortType protocol, bool status)
-        {
+        public PKServiceObject(string ip, int port, PortType protocol, bool status) {
             IP = ip;
             Port = port;
             Protocol = protocol;
             Status = status;
         }
 
-        #endregion
+        #endregion Initialization
     }
 }

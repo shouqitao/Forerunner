@@ -1,6 +1,6 @@
 ﻿/*
 ==============================================================================
-Copyright © Jason Drawdy 
+Copyright © Jason Drawdy
 
 All rights reserved.
 
@@ -32,18 +32,19 @@ other dealings in this Software without prior written authorization.
 
 #region Imports
 
-using System.Security;
 using System.Runtime.InteropServices;
+using System.Security;
 
-#endregion
-namespace Forerunner
-{
+#endregion Imports
+
+namespace Forerunner {
+
     /// <summary>
     /// Provides access to native Windows methods through a managed interface.
     /// </summary>
-    internal static class NativeMethods
-    {
+    internal static class NativeMethods {
         private const string IphlpApi = "iphlpapi.dll";
+
         /// <summary>
         /// Sends an ARP request to a specific IP address in order to resolve to its corresponding physical address.
         /// </summary>
